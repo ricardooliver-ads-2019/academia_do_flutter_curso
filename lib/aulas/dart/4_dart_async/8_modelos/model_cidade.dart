@@ -21,6 +21,7 @@ class ModelCidade {
   });
 
   factory ModelCidade.fromMap(Map<String, dynamic> map){
+    // Transformando um map em uma class modelo
     return ModelCidade(
       cep: map['cep'] ?? '',
       logradouro: map['logradouro'] ?? '',
@@ -33,13 +34,18 @@ class ModelCidade {
   }
 
   //factory ModelCidade.fromJson(String source){
+    // recebendo um json "String" e transformando em um map<String, dynamic>
+    // E transformando um map em uma class modelo
   //  var jsonMap = jsonDecode(source);
-  //  return ModelCidade.fromJson(jsonMap);
+  //  return ModelCidade.fromMap(jsonMap);
   //}
 
+  // recebendo um json "String" e transformando em um map<String, dynamic> e depois E transformando um map em uma class modelo
   factory ModelCidade.fromJson(String source) => ModelCidade.fromMap(jsonDecode(source));
 
+
   Map<String, dynamic> toMap(){
+    // Transformando minha class modelo em um map 
     return {
       'cep': cep,
       'logradouro': logradouro,
@@ -51,5 +57,18 @@ class ModelCidade {
     };
   }
 
+  // tranformando um map em um jason "string"  
   String toJson() => jsonEncode(toMap());
+
+  @override
+  String toString() {
+    return '''ModelCidade(
+      cep: ${cep}, 
+      logradouro: $logradouro, 
+      bairro: $bairro, 
+      complemento: $complemento, 
+      ddd: $ddd, 
+      localidade: $localidade, 
+      uf: $uf)''';
+  }
 }
