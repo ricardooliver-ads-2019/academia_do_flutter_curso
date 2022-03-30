@@ -1,0 +1,11 @@
+Processo ASSÍNCRONO é representado por duas class no dart
+
+    * Future (Futuro) --> É usado para representar um valor ou um erro que estará disponivel em algum momento no FUTUTO
+        - Um FUTURE receberá um único resoltado (Sucesso ou Erro).
+
+                                            -X-
+                                            
+    * Streams (Fluxo de dados) --> a STREAM tem a mesma característica de um momento futuro, ou sejá, receberá um valor 
+    ou um erro em algum momento
+        - Uma Stream é uma combinação de Future, dessa forma com STREAMS podemos receber vários valores como resposta.
+        # a Steam é como um canal aberto que ficará recebendo dados ate fecharmos esse canal
