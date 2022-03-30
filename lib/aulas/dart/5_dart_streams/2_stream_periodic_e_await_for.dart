@@ -19,5 +19,4 @@ Future<void> main() async {
 int callback(int value){
   print('valor de entrada $value');
   return (value +1) *2;
-  
 }
